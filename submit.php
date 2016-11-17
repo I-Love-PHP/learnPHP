@@ -20,11 +20,6 @@ if(!$name==null){
     echo "name is required!";
 }
 
-
-
-
-
-
 /*
     //—È÷§emailµÿ÷∑
     if (!$email==null) {

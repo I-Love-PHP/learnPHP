@@ -102,12 +102,42 @@ $password="123";
 
 // $stmt->close();
 
-    $search="select id,firstname,lastname,email from MyGuest";
-    $result=$conn->query($search);
+$query = "select * from myguests where firstname='jackie' order by id ;";
+$queryCount = "select count(*) from myguest where firstname='john';";
+$result1 = mysqli_query($conn, $queryCount);
+$result2 = mysqli_query($conn, $query);
 
-    if($result->num rows>0){
 
-    }
+if($result1!==0){
+
+
+}else{
+    echo "No results";
+}
+
+while($row = mysqli_fetch_array($result2)){
+    echo $row['id']."".$row['firstname']."".$row['lastname'];
+    echo "<br/>";
+}
+
+
+
+
+
+
+
+
+
+
+
+// while(($row = mysqli_fetch_array($result))!==null){
+//    echo $row['firstname']. " ". $row['lastname'];
+//    echo "<br/>";
+// }
+
+
+
+
 
 
 
